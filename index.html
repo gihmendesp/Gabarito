@@ -1,38 +1,236 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Gabarito da Gi</title>
 
-<meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<title>Meu Gabarito 🌸</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>🌸 Meu Gabarito 🌸</h1>
+    <h1>🌸 Gabarito da Gi</h1>
 
-<div class="config">
+    <p>
+        Sua evolução rumo à aprovação.
+    </p>
 
-<input type="number" id="inicio" placeholder="Questão inicial">
+</header>
 
-<input type="number" id="fim" placeholder="Questão final">
+<section class="config">
 
-<button onclick="gerar()">Gerar</button>
+    <div class="campo">
+
+        <label>
+            Questão inicial
+        </label>
+
+        <input
+            type="number"
+            id="inicio"
+            placeholder="Ex: 20">
+
+    </div>
+
+    <div class="campo">
+
+        <label>
+            Questão final
+        </label>
+
+        <input
+            type="number"
+            id="fim"
+            placeholder="Ex: 69">
+
+    </div>
+
+    <button id="gerar">
+        🌸 Gerar Gabarito
+    </button>
+
+</section>
+
+<section id="painel" class="oculto">
+
+    <div class="card-resumo">
+
+        <div>
+
+            <span>Respondidas</span>
+
+            <strong id="respondidas">
+                0
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>Acertos</span>
+
+            <strong id="acertos">
+                0
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>Erros</span>
+
+            <strong id="erros">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+    <div class="barra">
+
+        <div id="progresso"></div>
+
+    </div>
+
+</section>
+
+<section id="listaQuestoes">
+
+</section>
+
+<section
+id="acoes"
+class="oculto">
+
+<button id="finalizar">
+💖 Finalizar Correção
+</button>
+
+<button id="mostrarErradas">
+📚 Mostrar apenas as erradas
+</button>
+
+<button id="novoSimulado">
+🔄 Novo simulado
+</button>
+
+<button id="limparTudo">
+🗑 Limpar tudo
+</button>
+
+</section>
+
+<section
+id="resultado"
+class="resultado oculto">
+
+<h2>
+🌸 Resultado
+</h2>
+
+<div class="resultado-grid">
+
+<div>
+
+<h3>
+Questões
+</h3>
+
+<p id="rQuestoes">
+0
+</p>
 
 </div>
 
-<div id="gabarito"></div>
+<div>
+
+<h3>
+Respondidas
+</h3>
+
+<p id="rRespondidas">
+0
+</p>
 
 </div>
+
+<div>
+
+<h3>
+Acertos
+</h3>
+
+<p id="rAcertos">
+0
+</p>
+
+</div>
+
+<div>
+
+<h3>
+Erros
+</h3>
+
+<p id="rErros">
+0
+</p>
+
+</div>
+
+</div>
+
+<div class="percentual">
+
+<h2 id="porcentagem">
+0%
+</h2>
+
+</div>
+
+<h3 id="avaliacao">
+
+</h3>
+
+<p id="frase">
+
+</p>
+
+<div class="botoesResultado">
+
+<button id="copiar">
+
+📋 Copiar Resultado
+
+</button>
+
+<button id="pdf">
+
+📄 Exportar PDF
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+Feito com 💖 para a Gi.
+
+</footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
