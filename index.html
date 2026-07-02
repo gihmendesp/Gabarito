@@ -1,236 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌸 Gabarito da Gi</title>
+    <title>Gabarito da Gi v2.0</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
 
-    <h1>🌸 Gabarito da Gi</h1>
+    <div class="topo">
 
-    <p>
-        Sua evolução rumo à aprovação.
-    </p>
+        <h1>📘 Gabarito da Gi v2.0</h1>
+
+        <button id="toggleTema">🌙</button>
+
+    </div>
+
+    <p>Seu sistema de estudos para concursos</p>
 
 </header>
 
-<section class="config">
+<main>
 
-    <div class="campo">
+<!-- CADASTRO -->
+<section class="card">
 
-        <label>
-            Questão inicial
-        </label>
+<h2>➕ Nova Questão</h2>
 
-        <input
-            type="number"
-            id="inicio"
-            placeholder="Ex: 20">
+<input id="disciplina" placeholder="Disciplina">
 
-    </div>
+<input id="banca" placeholder="Banca">
 
-    <div class="campo">
+<input id="assunto" placeholder="Assunto">
 
-        <label>
-            Questão final
-        </label>
+<input id="concurso" placeholder="Concurso">
 
-        <input
-            type="number"
-            id="fim"
-            placeholder="Ex: 69">
+<input id="ano" placeholder="Ano">
 
-    </div>
+<textarea id="enunciado" placeholder="Enunciado da questão"></textarea>
 
-    <button id="gerar">
-        🌸 Gerar Gabarito
-    </button>
+<textarea id="resposta" placeholder="Resposta / Comentário"></textarea>
+
+<button id="btnAdicionar">Adicionar Questão</button>
 
 </section>
 
-<section id="painel" class="oculto">
+<!-- DASHBOARD -->
+<section class="card">
 
-    <div class="card-resumo">
+<h2>📊 Desempenho</h2>
 
-        <div>
+<div class="stats">
 
-            <span>Respondidas</span>
+<div><h3>Total</h3><p id="total">0</p></div>
 
-            <strong id="respondidas">
-                0
-            </strong>
+<div><h3>Respondidas</h3><p id="respondidas">0</p></div>
 
-        </div>
+<div><h3>Acertos</h3><p id="acertos">0</p></div>
 
-        <div>
+<div><h3>Erros</h3><p id="erros">0</p></div>
 
-            <span>Acertos</span>
+</div>
 
-            <strong id="acertos">
-                0
-            </strong>
+<div class="barra">
+<div id="progresso"></div>
+</div>
 
-        </div>
-
-        <div>
-
-            <span>Erros</span>
-
-            <strong id="erros">
-                0
-            </strong>
-
-        </div>
-
-    </div>
-
-    <div class="barra">
-
-        <div id="progresso"></div>
-
-    </div>
+<p id="mensagem"></p>
 
 </section>
 
-<section id="listaQuestoes">
+<!-- FILTROS -->
+<section class="card">
+
+<h2>🔍 Filtros</h2>
+
+<input id="filtroTexto" placeholder="Pesquisar...">
+
+<select id="filtroStatus">
+<option value="todos">Todos</option>
+<option value="acertou">Acertadas</option>
+<option value="errou">Erradas</option>
+<option value="nao">Não respondidas</option>
+</select>
 
 </section>
 
-<section
-id="acoes"
-class="oculto">
+<!-- LISTA -->
+<section class="card">
 
-<button id="finalizar">
-💖 Finalizar Correção
-</button>
+<h2>📚 Questões</h2>
 
-<button id="mostrarErradas">
-📚 Mostrar apenas as erradas
-</button>
-
-<button id="novoSimulado">
-🔄 Novo simulado
-</button>
-
-<button id="limparTudo">
-🗑 Limpar tudo
-</button>
+<div id="lista"></div>
 
 </section>
 
-<section
-id="resultado"
-class="resultado oculto">
-
-<h2>
-🌸 Resultado
-</h2>
-
-<div class="resultado-grid">
-
-<div>
-
-<h3>
-Questões
-</h3>
-
-<p id="rQuestoes">
-0
-</p>
-
-</div>
-
-<div>
-
-<h3>
-Respondidas
-</h3>
-
-<p id="rRespondidas">
-0
-</p>
-
-</div>
-
-<div>
-
-<h3>
-Acertos
-</h3>
-
-<p id="rAcertos">
-0
-</p>
-
-</div>
-
-<div>
-
-<h3>
-Erros
-</h3>
-
-<p id="rErros">
-0
-</p>
-
-</div>
-
-</div>
-
-<div class="percentual">
-
-<h2 id="porcentagem">
-0%
-</h2>
-
-</div>
-
-<h3 id="avaliacao">
-
-</h3>
-
-<p id="frase">
-
-</p>
-
-<div class="botoesResultado">
-
-<button id="copiar">
-
-📋 Copiar Resultado
-
-</button>
-
-<button id="pdf">
-
-📄 Exportar PDF
-
-</button>
-
-</div>
-
-</section>
+</main>
 
 <footer>
 
-Feito com 💖 para a Gi.
+<p>Gabarito da Gi v2.0 © 2026</p>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
